@@ -857,13 +857,25 @@ form .btn {
   z-index: 0;
   pointer-events: none;
 }
+.App {
+  margin-top: 50px;
+}
+
+footer {
+  margin-top: 100px;
+}
+.home {
+  margin-top:150px;
+}
 
 blockquote {
   font-style: italic;
-  padding: 3rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
   font-size: 1.09rem;
   position: relative;
   border-left: 3px solid;
+  margin-bottom: 20px;
 }
 
 ul,

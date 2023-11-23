@@ -608,9 +608,6 @@ a:hover {
 .form-control:-webkit-input-placeholder > .mbr-iconfont {
   font-size: 1.375rem;
 }
-blockquote {
-  border-color: #232323;
-}
 /* Forms */
 .jq-selectbox li:hover,
 .jq-selectbox li.selected {
@@ -1374,7 +1371,7 @@ a {
 .cid-twLENIR03B blockquote {
   border-color: #6592e6;
   border-radius: 4px;
-  background-color: #f5ebeb;
+  text-align: left;
 }
 .cid-twLEOytmsH {
   padding-top: 5rem;
