@@ -1,4 +1,5 @@
 import React from 'react';
+import ConnectWallet from "./connectWallet";
 
 class Navbar extends React.Component {
 
@@ -54,9 +55,8 @@ class Navbar extends React.Component {
                                        href="whitepaper">Whitepaper</a>
                                 </div>
                             </li>
-                            <li className="nav-item">
-                                <button className="btn btn-black btn-sm align-center" title="dfs">Connect wallet (Soon)
-                                </button>
+                            <li className="nav-item dropdown">
+                                <ConnectWallet/>
                             </li>
                         </ul>
                     </div>
