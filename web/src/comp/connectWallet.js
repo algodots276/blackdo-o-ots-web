@@ -124,7 +124,7 @@ export default function ConnectWallet() {
     }
 
     return (<div>
-        <a className="nav-link link text-primary display-4"
+        <a className="btn btn-black btn-sm"
            data-toggle="dropdown-submenu" data-bs-toggle="dropdown"
            data-bs-auto-close="outside" aria-expanded="false">
             <svg fill="currentColor" strokeWidth="0" viewBox="0 0 24 24"
@@ -141,15 +141,15 @@ export default function ConnectWallet() {
 
                 <div key={provider.metadata.id} className="dropdown-item text-primary display-4">
                     <div className="row">
-                        <div className="col-lg-4">
+                        <div className="col-lg-5">
                             <img width={40}
                                  height={40}
                                  alt={`${provider.metadata.name} icon`}
                                  src={provider.metadata.icon}/>
                         </div>
-                        <div className="col-lg-8">
+                        <div className="col-lg-7">
                             <button type="button" onClick={(e) => handleConnect(e, provider)}>
-                                <h5>{provider.metadata.name}</h5>
+                                <h5>{provider.metadata.name}&nbsp;&nbsp;&nbsp;&nbsp;</h5>
                             </button>
                         </div>
                     </div>

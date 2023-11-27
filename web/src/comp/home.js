@@ -14,7 +14,7 @@ export default function Home() {
         <div className="row justify-content-center">
             <div className="title col-12 col-md-5">
                 <h3 className="mbr-section-title mbr-fonts-style align-center mb-4 display-5">
-                    <strong>BlackDo-o-ots</strong>
+                    <strong className="mbr-bold">BlackDo-o-ots</strong>
                 </h3>
                 <h3 className="mbr-section-title mbr-fonts-style align-center mb-4 display-5"><strong>⬤━⬤━⬤</strong>
                 </h3>
