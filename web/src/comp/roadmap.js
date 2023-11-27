@@ -37,7 +37,7 @@ class Roadmap extends React.Component {
                                         <div className="single-timeline-content d-flex"
                                              data-wow-delay="0.3s">
                                             <div className="timeline-text">
-                                                <h6>Community can buy merch with Algodots</h6>
+                                                <h6>Buy merch with Algodots</h6>
                                             </div>
                                         </div>
                                     </div>

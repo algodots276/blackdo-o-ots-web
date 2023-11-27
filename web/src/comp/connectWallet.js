@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 import {useCopyToClipboard} from 'usehooks-ts';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCopy, faCheck} from '@fortawesome/free-solid-svg-icons'
@@ -8,6 +9,7 @@ import axios from 'axios';
 
 export default function ConnectWallet() {
 
+    const navigate = useNavigate();
     const [value, copy] = useCopyToClipboard()
     const [copyIcon, setCopyIcon] = useState(faCopy);
 
@@ -18,7 +20,7 @@ export default function ConnectWallet() {
     const {providers, activeAccount, getAssets} = useWallet();
 
     function handleConnect(e, provider) {
-        provider.connect();
+        provider.connect().then(yes => navigate("/"));
         e.target.parentNode.parentNode.parentNode.parentNode.parentNode.classList.remove("show");
     }
 
@@ -32,11 +34,11 @@ export default function ConnectWallet() {
     }
 
     function formatDots(dotsAmount) {
-        return Math.floor(dotsAmount / 10000000).toLocaleString(undefined, {maximumFractionDigits:2});
+        return Math.floor(dotsAmount / 10000000).toLocaleString(undefined, {maximumFractionDigits: 2});
     }
 
     function formatAlgos(algoAmount) {
-        return Math.floor(algoAmount / 1000000).toLocaleString(undefined, {maximumFractionDigits:2});
+        return Math.floor(algoAmount / 1000000).toLocaleString(undefined, {maximumFractionDigits: 2});
     }
 
     function getProviderById(providerId) {
@@ -56,18 +58,21 @@ export default function ConnectWallet() {
 
     useEffect(() => {
         if (activeAccount) {
+            console.log("nice");
             axios.get('https://api.nf.domains/nfd/lookup?address=' + activeAccount.address)
                 .then(response => {
                     setNfdData(response.data[activeAccount.address]);
                 })
                 .catch(error => {
-                    console.error(error);
+                    // Nothing here
                 });
             getAssets().then(assets => {
                 const dots = assets.filter(a => a['asset-id'] == 745410378);
                 setDotsAsset(dots[0]);
                 const algo = assets.filter(a => a['asset-id'] == 287867876);
                 setAlgoAsset(algo[0]);
+            }).catch(error => {
+                // Nothing here
             });
         }
 
@@ -98,15 +103,16 @@ export default function ConnectWallet() {
                     <div className="col-lg-12">
                     </div>
                     <div className="col-lg-12">
-                        {algoAsset? formatAlgos(algoAsset.amount) : "0"} algo
+                        {algoAsset ? formatAlgos(algoAsset.amount) : "0"} algo
                         <br/>
-                        {dotsAsset? formatDots(dotsAsset.amount) : "0"} dots
+                        {dotsAsset ? formatDots(dotsAsset.amount) : "0"} dots
                     </div>
                 </div>
                 <div className="dropdown-item text-primary display-4">
                     <div className="row" onClick={(e) => handleCopyClick(e)} style={{cursor: "pointer"}}>
                         <div className="col-lg-12">
-                            <FontAwesomeIcon icon={copyIcon}/> {activeAccount ? trimAccount(activeAccount.address) :null}
+                            <FontAwesomeIcon
+                                icon={copyIcon}/> {activeAccount ? trimAccount(activeAccount.address) : null}
                         </div>
                     </div>
                 </div>
@@ -124,7 +130,7 @@ export default function ConnectWallet() {
     }
 
     return (<div>
-        <a className="btn btn-black btn-sm"
+        <a className="nav-link link text-primary display-4"
            data-toggle="dropdown-submenu" data-bs-toggle="dropdown"
            data-bs-auto-close="outside" aria-expanded="false">
             <svg fill="currentColor" strokeWidth="0" viewBox="0 0 24 24"
