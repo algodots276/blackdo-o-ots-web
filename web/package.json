@@ -2,6 +2,7 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://blackdo-o-ots.com/",
   "dependencies": {
     "@blockshake/defly-connect": "^1.1.6",
     "@daffiwallet/connect": "^1.0.3",
@@ -15,7 +16,10 @@
     "@testing-library/user-event": "^13.5.0",
     "@txnlab/use-wallet": "^2.2.0",
     "algosdk": "^2.7.0",
+    "anpm": "^1.0.1",
+    "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
+    "install": "^0.13.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
@@ -23,6 +27,7 @@
     "react-router-dom": "^6.20.0",
     "react-scripts": "5.0.1",
     "socicon": "^3.0.5",
+    "usehooks-ts": "^2.9.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

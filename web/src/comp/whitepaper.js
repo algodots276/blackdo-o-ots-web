@@ -7,7 +7,7 @@ class WhitePaper extends React.Component {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-10">
-                        <blockquote>
+                        <blockquote className="align-left">
                             <h5 className="mbr-section-title mbr-fonts-style mb-2 display-7"><strong>Who is the Algodots
                                 token for?</strong>
                             </h5>
@@ -26,7 +26,7 @@ class WhitePaper extends React.Component {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-10">
-                        <blockquote>
+                        <blockquote className="align-left">
                             <h5 className="mbr-section-title mbr-fonts-style mb-2 display-7"><strong>How many tokens
                                 were
                                 created?</strong>
@@ -45,7 +45,7 @@ class WhitePaper extends React.Component {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-10">
-                        <blockquote>
+                        <blockquote className="align-left">
                             <h5 className="mbr-section-title mbr-fonts-style mb-2 display-7"><strong>how to get daily
                                 token drops?
                             </strong>
@@ -61,7 +61,7 @@ class WhitePaper extends React.Component {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-10">
-                        <blockquote>
+                        <blockquote className="align-left">
                             <h5 className="mbr-section-title mbr-fonts-style mb-2 display-7"><strong>how token
                                 integration works
                                 with royalty collection system?</strong></h5>

@@ -10,8 +10,8 @@ class Roadmap extends React.Component {
                     <div className="col-12 col-sm-8 col-lg-6">
                         <div className="section_heading text-center">
                             <br/>
-                            <h3>A brief story and roadmap</h3>
                             <br/>
+                            <h3>Our Roadmap</h3>
                             <br/>
                             <div className="line"></div>
                         </div>
@@ -22,16 +22,30 @@ class Roadmap extends React.Component {
                         <div className="apland-timeline-area">
                             <div className="single-timeline-area">
                                 <div className="timeline-date wow fadeInLeft" data-wow-delay="0.1s">
-                                    <p>Near future</p>
+                                    <p className="mbr-bold"><span className="roadmapFutureLabel">FUTURE</span>2024 Q1</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-12 col-md-6 col-lg-4">
                                         <div className="single-timeline-content d-flex wow fadeInLeft"
                                              data-wow-delay="0.3s">
-                                            <div className="timeline-icon">
-                                                <i className="fa fa-address-card" aria-hidden="true"></i></div>
                                             <div className="timeline-text">
-                                                <h6>⬤━⬤━⬤</h6>
+                                                <h6>Expand the team</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-12 col-md-6 col-lg-4">
+                                        <div className="single-timeline-content d-flex"
+                                             data-wow-delay="0.3s">
+                                            <div className="timeline-text">
+                                                <h6>Community can buy merch with Algodots</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-12 col-md-6 col-lg-4">
+                                        <div className="single-timeline-content d-flex"
+                                             data-wow-delay="0.3s">
+                                            <div className="timeline-text">
+                                                <h6>Reach 25k$ in liquidity</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -45,7 +59,7 @@ class Roadmap extends React.Component {
                                     <div className="col-12 col-md-6 col-lg-4">
                                         <div className="single-timeline-content d-flex wow fadeInLeft"
                                              data-wow-delay="0.3s">
-                                            <div className="timeline-icon">
+                                            <div className="timeline-icon small">
                                                 <i className="fa fa-address-card" aria-hidden="true"></i></div>
                                             <div className="timeline-text">
                                                 <h6>Website update</h6>
@@ -108,7 +122,6 @@ class Roadmap extends React.Component {
                                     </div>
                                 </div>
                             </div>
-
                             <div className="single-timeline-area">
                                 <div className="timeline-date wow fadeInLeft" data-wow-delay="0.1s">
                                     <p>2022 June</p>
@@ -121,16 +134,6 @@ class Roadmap extends React.Component {
                                                 <i className="fa fa-briefcase" aria-hidden="true"></i></div>
                                             <div className="timeline-text">
                                                 <h6>276 NFT collection created</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 col-md-6 col-lg-4">
-                                        <div className="single-timeline-content d-flex wow fadeInLeft"
-                                             data-wow-delay="0.5s">
-                                            <div className="timeline-icon">
-                                                <i className="fa fa-desktop" aria-hidden="true"></i></div>
-                                            <div className="timeline-text">
-                                                <h6>Algodots token introduced to a community</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -148,6 +151,16 @@ class Roadmap extends React.Component {
                                                 <i className="fa fa-id-card" aria-hidden="true"></i></div>
                                             <div className="timeline-text">
                                                 <h6>BlackDo-o-ots project start.</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-12 col-md-6 col-lg-4">
+                                        <div className="single-timeline-content d-flex wow fadeInLeft"
+                                             data-wow-delay="0.5s">
+                                            <div className="timeline-icon">
+                                                <i className="fa fa-desktop" aria-hidden="true"></i></div>
+                                            <div className="timeline-text">
+                                                <h6>Created Algodots token</h6>
                                             </div>
                                         </div>
                                     </div>

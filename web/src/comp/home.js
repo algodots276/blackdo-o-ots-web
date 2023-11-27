@@ -1,14 +1,13 @@
 import React from 'react';
 import {useWallet} from '@txnlab/use-wallet'
+import Merch from "./merch";
 
 export default function Home() {
 
     const {activeAccount} = useWallet();
 
     if (activeAccount) {
-        return <div>
-
-        </div>
+        return <Merch/>
     }
 
     return (<div className="container home">

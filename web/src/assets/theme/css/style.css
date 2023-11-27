@@ -857,6 +857,11 @@ form .btn {
   z-index: 0;
   pointer-events: none;
 }
+.algorand-logo {
+  width: 26px;
+  height: 26px;
+  margin: 0 auto;
+}
 .App {
   margin-top: 50px;
 }
