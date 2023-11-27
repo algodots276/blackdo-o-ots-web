@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useLayoutEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {useCopyToClipboard} from 'usehooks-ts';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -17,7 +17,7 @@ export default function ConnectWallet() {
     const [algoAsset, setAlgoAsset] = useState(undefined);
     const [nfdData, setNfdData] = useState(undefined);
 
-    const {providers, activeAccount, getAssets} = useWallet();
+    const {providers, activeAccount, getAssets, isReady} = useWallet();
 
     function handleConnect(e, provider) {
         provider.connect().then(yes => navigate("/"));
@@ -56,9 +56,8 @@ export default function ConnectWallet() {
         return accountAddress.substring(0, 6) + "..." + accountAddress.substring(accountAddress.length - 6, accountAddress.length);
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (activeAccount) {
-            console.log("nice");
             axios.get('https://api.nf.domains/nfd/lookup?address=' + activeAccount.address)
                 .then(response => {
                     setNfdData(response.data[activeAccount.address]);
@@ -73,12 +72,16 @@ export default function ConnectWallet() {
                 setAlgoAsset(algo[0]);
             }).catch(error => {
                 // Nothing here
+                console.log(error);
             });
         }
 
     }, [activeAccount]);
 
-    if (activeAccount && getProviderById(activeAccount.providerId)) {
+
+    if (!isReady) {
+        return <div style={{width: "400px"}}></div>;
+    } else if (activeAccount && getProviderById(activeAccount.providerId)) {
         return (<div>
             <a className="nav-link link text-primary display-4"
                data-toggle="dropdown-submenu" data-bs-toggle="dropdown"
@@ -93,15 +96,13 @@ export default function ConnectWallet() {
                         />
                     </div>
                     <div className="col-md-9 align-left flex-nowrap small">
-                        {nfdData ? nfdData.name : trimAccount(activeAccount.address)}
+                        {nfdData ? nfdData.name : isReady ? trimAccount(activeAccount.address) : null}
                     </div>
                 </div>
             </a>
 
             <div className="dropdown-menu" aria-labelledby="dropdown-237" data-bs-popper="none">
                 <div className="row align-center text-success">
-                    <div className="col-lg-12">
-                    </div>
                     <div className="col-lg-12">
                         {algoAsset ? formatAlgos(algoAsset.amount) : "0"} algo
                         <br/>
@@ -111,8 +112,7 @@ export default function ConnectWallet() {
                 <div className="dropdown-item text-primary display-4">
                     <div className="row" onClick={(e) => handleCopyClick(e)} style={{cursor: "pointer"}}>
                         <div className="col-lg-12">
-                            <FontAwesomeIcon
-                                icon={copyIcon}/> {activeAccount ? trimAccount(activeAccount.address) : null}
+                            <FontAwesomeIcon icon={copyIcon}/> {activeAccount ? trimAccount(activeAccount.address) : null}
                         </div>
                     </div>
                 </div>
@@ -127,9 +127,7 @@ export default function ConnectWallet() {
                 </div>
             </div>
         </div>)
-    }
-
-    return (<div>
+    } else return (<div>
         <a className="nav-link link text-primary display-4"
            data-toggle="dropdown-submenu" data-bs-toggle="dropdown"
            data-bs-auto-close="outside" aria-expanded="false">
