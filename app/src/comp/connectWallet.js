@@ -21,15 +21,17 @@ export default function ConnectWallet() {
     }
 
     return (<div>
-        <Button variant="primary" onClick={handleModalShow}>
-            <svg fill="currentColor" strokeWidth="0" viewBox="0 0 24 24"
-                 height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 12h2v4h-2z"></path>
-                <path
-                    d="M20 7V5c0-1.103-.897-2-2-2H5C3.346 3 2 4.346 2 6v12c0 2.201 1.794 3 3 3h15c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zM5 5h13v2H5a1.001 1.001 0 0 1 0-2zm15 14H5.012C4.55 18.988 4 18.805 4 18V8.815c.314.113.647.185 1 .185h15v10z"></path>
-            </svg>
-            &nbsp;Connect wallet
-        </Button>
+        <a onClick={handleModalShow}>
+            <div className="text-nowrap small">
+                <svg fill="currentColor" strokeWidth="0" viewBox="0 0 24 24"
+                     height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 12h2v4h-2z"></path>
+                    <path
+                        d="M20 7V5c0-1.103-.897-2-2-2H5C3.346 3 2 4.346 2 6v12c0 2.201 1.794 3 3 3h15c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zM5 5h13v2H5a1.001 1.001 0 0 1 0-2zm15 14H5.012C4.55 18.988 4 18.805 4 18V8.815c.314.113.647.185 1 .185h15v10z"></path>
+                </svg>
+                &nbsp;Connect wallet
+            </div>
+        </a>
         <Modal show={modalShow} onHide={handleModalClose} size="md"
                aria-labelledby="example-modal-sizes-title-sm">
 
@@ -38,16 +40,16 @@ export default function ConnectWallet() {
                 {providers?.map((provider) => (
                     <div key={provider.metadata.id} className="dropdown-item text-primary display-4">
                         <div className="row">
-                            <div className="col-sm-2 align-right btn-group-vertical">
+                            <div className="col-2 align-right btn-group-vertical">
                                 <img width={40}
                                      height={40}
                                      alt={`${provider.metadata.name} icon`}
                                      src={provider.metadata.icon}/>
                             </div>
-                            <div className="col-sm-3 align-left btn-group-vertical">
+                            <div className="col-3 align-left btn-group-vertical">
                                 <h5>{provider.metadata.name}</h5>
                             </div>
-                            <div className="col-sm-7 align-right">
+                            <div className="col-7 align-right">
                                 <Button variant="primary sm" size="sm" onClick={(e) => handleConnect(e, provider)}>
                                     Connect
                                 </Button>

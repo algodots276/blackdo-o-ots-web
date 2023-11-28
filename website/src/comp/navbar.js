@@ -24,11 +24,6 @@ class Navbar extends React.Component {
                         <ul className="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                             <li className="nav-item">
                                 <a className="nav-link link show text-primary display-4"
-                                   href="join">
-                                    <span className="text-primary"></span>Join</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link link show text-primary display-4"
                                    href="roadmap">
                                     <span className="text-primary"></span>Roadmap</a>
                             </li>

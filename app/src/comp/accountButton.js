@@ -87,25 +87,23 @@ export default function AccountButton() {
     if (activeAccount && getProviderById(activeAccount.providerId)) {
         return (
             <div>
-                <a className="nav-link link text-primary" onClick={handleModalShow}>
-                    <div className="row border-dark border border-1"
-                         style={{backgroundColor: "white", borderRadius: "5px", padding: "5px 5px"}}>
-                        <div className="col-md-12 align-left text-nowrap small" style={{margin: "0 auto"}}>
-                            {trimAccount(activeAccount.address, 6)} {algoAsset ? "| " + formatAlgos(algoAsset.amount) + " algo" : null}
-                        </div>
+                <a onClick={handleModalShow}>
+                    <div className="text-nowrap small">
+                        {trimAccount(activeAccount.address, 6)} {algoAsset ? "| " + formatAlgos(algoAsset.amount) + " algo" : null}
                     </div>
                 </a>
+
                 <Modal show={modalShow} onHide={handleModalClose} size="md"
                        aria-labelledby="example-modal-sizes-title-sm">
 
                     <Modal.Body>
                         <div className="row" style={{cursor: "pointer"}}>
-                            <div className="col-lg-7">
+                            <div className="col-7">
                                 <h5>{nfdData ? nfdData.name : null}</h5>
                                 {activeAccount ? trimAccount(activeAccount.address, 10) : null} &nbsp;
-                                <FontAwesomeIcon onClick={(e) => handleCopyClick(e)}  icon={copyIcon}/>
+                                <FontAwesomeIcon onClick={(e) => handleCopyClick(e)} icon={copyIcon}/>
                             </div>
-                            <div className="col-lg-5 align-right">
+                            <div className="col-5 align-right">
                                 {algoAsset ? formatAlgos(algoAsset.amount) : "0"} algo
                                 <br/>
                                 {dotsAsset ? formatDots(dotsAsset.amount) : "0"} dots
@@ -113,17 +111,17 @@ export default function AccountButton() {
                         </div>
                         <br/>
                         <div className="row">
-                            <div className="col-lg-2 text-lg-start">
+                            <div className="col-2 text-lg-start">
                                 <img
                                     width={45}
                                     height={45}
                                     src={getProviderById(activeAccount.providerId).metadata.icon}
                                 />
                             </div>
-                            <div className="col-lg-2 text-lg-start my-auto">
+                            <div className="col-2 text-lg-start my-auto">
                                 <h5>{getProviderById(activeAccount.providerId).metadata.name}</h5>
                             </div>
-                            <div className="col-lg-8 align-right">
+                            <div className="col-8 align-right">
                                 <button type="button" onClick={(e) => handleDisconnect(e)}>
                                     Disconnect
                                 </button>

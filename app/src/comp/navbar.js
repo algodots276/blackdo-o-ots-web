@@ -7,17 +7,19 @@ export default function Navbar() {
 
     const {providers, activeAccount, getAssets, isReady} = useWallet();
 
-    return <section className="menu cid-s48OLK6784">
-        <nav className="navbar navbar-dropdown navbar-expand-lg">
-            <div className="container">
-                <div className="navbar-brand">
-                    <span className="navbar-caption-wrap">
-                        <a className="navbar-caption text-black text-primary display-7" href="/">⬤━⬤━⬤</a></span>
+    return <div className="row my-auto" >
+        <div className="col-1"></div>
+        <div className="col-10 my-auto">
+            <div className="row">
+                <div className="col-4 my-auto align-left">
+                    <span>⬤━⬤━⬤</span>
                 </div>
-                <div className="navbar-nav nav-right">
+                <div className="col-8 align-right">
                     {isReady ? activeAccount ? <AccountButton/> : <ConnectWallet/> : null}
                 </div>
             </div>
-        </nav>
-    </section>;
+        </div>
+        <div className="col-1"></div>
+
+    </div>;
 }
