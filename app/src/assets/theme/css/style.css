@@ -11,6 +11,11 @@ body {
   position: relative;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 button {
   background-color: transparent;
   border-color: transparent;
@@ -653,11 +658,6 @@ nav .mbr-section-btn {
 input[type=range] {
   padding-left: 0 !important;
   padding-right: 0 !important;
-}
-
-.modal-dialog,
-.modal-content {
-  height: 100%;
 }
 
 .modal-dialog .carousel-inner {

@@ -1,10 +1,6 @@
 // Pages
 import Navbar from './comp/navbar';
 import Home from './comp/home';
-import Roadmap from './comp/roadmap';
-import WhitePaper from "./comp/whitepaper";
-import Footer from "./comp/footer";
-import JoinPage from "./comp/join";
 
 import {Routes, Route} from 'react-router-dom';
 
@@ -38,11 +34,7 @@ export default function App() {
                 <Navbar/>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
-                    <Route path="/join" element={<JoinPage/>}/>
-                    <Route path="/roadmap" element={<Roadmap/>}/>
-                    <Route path="/whitepaper" element={<WhitePaper/>}/>
                 </Routes>
-                <Footer/>
             </div>
         </WalletProvider>
     );
