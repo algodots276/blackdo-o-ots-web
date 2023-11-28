@@ -1,5 +1,4 @@
 import React from 'react';
-import ConnectWallet from "./connectWallet";
 
 class Navbar extends React.Component {
 
@@ -23,6 +22,11 @@ class Navbar extends React.Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                            <li className="nav-item">
+                                <a className="nav-link link show text-primary display-4"
+                                   href="join">
+                                    <span className="text-primary"></span>Join</a>
+                            </li>
                             <li className="nav-item">
                                 <a className="nav-link link show text-primary display-4"
                                    href="roadmap">
@@ -55,8 +59,10 @@ class Navbar extends React.Component {
                                        href="whitepaper">Whitepaper</a>
                                 </div>
                             </li>
-                            <li className="nav-item dropdown">
-                                <ConnectWallet/>
+                            <li className="nav-item">
+                                <a className="btn btn-black"
+                                   href="https://app.blackdo-o-ots.com" target="_blank">
+                                    <span className="text-primary"></span>Launch app</a>
                             </li>
                         </ul>
                     </div>

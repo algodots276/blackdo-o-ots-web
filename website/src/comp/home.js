@@ -1,14 +1,6 @@
 import React from 'react';
-import {useWallet} from '@txnlab/use-wallet'
-import Merch from "./merch";
 
 export default function Home() {
-
-    const {activeAccount} = useWallet();
-
-    if (activeAccount) {
-        return <Merch/>
-    }
 
     return (<div className="container home">
         <div className="row justify-content-center">

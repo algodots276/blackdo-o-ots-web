@@ -17,33 +17,19 @@ import './assets/bootstrap/css/bootstrap-reboot.min.css';
 import './assets/bootstrap/css/bootstrap-grid.min.css';
 import './assets/mobirise/css/mbr-additional.css';
 
-// use-wallet
-import {WalletProvider, useInitializeProviders, PROVIDER_ID} from '@txnlab/use-wallet'
-import {DeflyWalletConnect} from '@blockshake/defly-connect'
-import {PeraWalletConnect} from '@perawallet/connect'
 
 export default function App() {
 
-    const providers = useInitializeProviders({
-        providers: [
-            {id: PROVIDER_ID.DEFLY, clientStatic: DeflyWalletConnect},
-            {id: PROVIDER_ID.PERA, clientStatic: PeraWalletConnect},
-            {id: PROVIDER_ID.EXODUS}
-        ]
-    })
-
     return (
-        <WalletProvider value={providers}>
-            <div className="App">
-                <Navbar/>
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/join" element={<JoinPage/>}/>
-                    <Route path="/roadmap" element={<Roadmap/>}/>
-                    <Route path="/whitepaper" element={<WhitePaper/>}/>
-                </Routes>
-                <Footer/>
-            </div>
-        </WalletProvider>
+        <div className="App">
+            <Navbar/>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/join" element={<JoinPage/>}/>
+                <Route path="/roadmap" element={<Roadmap/>}/>
+                <Route path="/whitepaper" element={<WhitePaper/>}/>
+            </Routes>
+            <Footer/>
+        </div>
     );
 }
