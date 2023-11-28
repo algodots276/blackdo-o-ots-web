@@ -35,10 +35,6 @@ class Footer extends React.Component {
                 </a>
             </div>
 
-            <div className="text-center text-white p-3">
-                © 2022 - 2023 <a className="text-white" href="https://blackdo-o-ots.com/">BlackDo-o-ots.com</a>
-            </div>
-
         </footer>;
     }
 }
