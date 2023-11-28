@@ -89,7 +89,7 @@ export default function AccountButton() {
             <div>
                 <a onClick={handleModalShow}>
                     <div className="text-nowrap small">
-                        {trimAccount(activeAccount.address, 6)} {algoAsset ? "| " + formatAlgos(algoAsset.amount) + " algo" : null}
+                        {trimAccount(activeAccount.address, 5)} {algoAsset ? "| " + formatAlgos(algoAsset.amount) + " algo" : null}
                     </div>
                 </a>
 
@@ -118,10 +118,10 @@ export default function AccountButton() {
                                     src={getProviderById(activeAccount.providerId).metadata.icon}
                                 />
                             </div>
-                            <div className="col-2 text-lg-start my-auto">
+                            <div className="col-4 text-lg-start my-auto">
                                 <h5>{getProviderById(activeAccount.providerId).metadata.name}</h5>
                             </div>
-                            <div className="col-8 align-right">
+                            <div className="col-6 align-right">
                                 <button type="button" onClick={(e) => handleDisconnect(e)}>
                                     Disconnect
                                 </button>

@@ -14,7 +14,7 @@ export default function Navbar() {
                 <div className="col-4 my-auto align-left">
                     <span>⬤━⬤━⬤</span>
                 </div>
-                <div className="col-8 align-right">
+                <div className="col-8 align-right my-auto">
                     {isReady ? activeAccount ? <AccountButton/> : <ConnectWallet/> : null}
                 </div>
             </div>
