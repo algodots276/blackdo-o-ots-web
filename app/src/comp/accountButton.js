@@ -100,7 +100,7 @@ export default function AccountButton() {
                         <div className="row" style={{cursor: "pointer"}}>
                             <div className="col-7">
                                 <h5>{nfdData ? nfdData.name : null}</h5>
-                                {activeAccount ? trimAccount(activeAccount.address, 10) : null} &nbsp;
+                                {activeAccount ? trimAccount(activeAccount.address, 7) : null} &nbsp;
                                 <FontAwesomeIcon onClick={(e) => handleCopyClick(e)} icon={copyIcon}/>
                             </div>
                             <div className="col-5 align-right">

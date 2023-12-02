@@ -9,6 +9,7 @@ export default function ConnectWallet() {
     const {providers, isReady} = useWallet();
 
     const [modalShow, setModalShow] = useState(false);
+
     const handleModalClose = () => setModalShow(false);
     const handleModalShow = () => setModalShow(true);
 
