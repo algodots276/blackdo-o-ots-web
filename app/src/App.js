@@ -35,7 +35,7 @@ export default function App() {
                 <Navbar/>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
-                    <Route path="/dog" element={<Dog/>}/>
+                    <Route path="/dog/:ipfs/:id" element={<Dog/>}/>
                 </Routes>
             </div>
         </WalletProvider>

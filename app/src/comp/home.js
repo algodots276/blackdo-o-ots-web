@@ -10,7 +10,7 @@ export default function Home() {
     const {activeAccount, getAssets, isReady} = useWallet();
 
     useLayoutEffect(() => {
-        if (activeAccount) {
+        if (isReady && activeAccount) {
             setDotsNFTs([]);
             getAssets().then(assets => {
 
@@ -40,14 +40,11 @@ export default function Home() {
 
     }, [activeAccount]);
 
-    if (activeAccount) {
-        // https://mdbootstrap.com/docs/standard/extended/gallery/
+    if (isReady && activeAccount) {
         return (
             <div>
                 <p><br/><br/></p>
-
-                <div
-                    id="carouselMultiItemExample"
+                <div id="carouselMultiItemExample"
                     data-mdb-carousel-init className="carousel slide carousel-dark text-center"
                     data-mdb-ride="carousel"
                 >
@@ -64,9 +61,9 @@ export default function Home() {
                                                         src={"https://ipfs.algonode.xyz/ipfs/" + dog.url}
                                                     />
                                                     <QRCode style={{ position: 'absolute', top: 0, right: 0, padding: '5px' }}
-                                                        size={64}
-                                                        value={dog.fullName}
-                                                        viewBox={`0 0 64 64`} />
+                                                        size={75}
+                                                        value={window.location.href + "dog/" + dog.url}
+                                                        viewBox={`0 0 75 75`} />
                                                 </div>
                                                 <div className="card-body">
                                                     <div className="row">
