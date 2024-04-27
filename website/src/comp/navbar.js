@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 class Navbar extends React.Component {
 
@@ -6,10 +7,7 @@ class Navbar extends React.Component {
         return <section className="menu cid-s48OLK6784">
             <nav className="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
                 <div className="container">
-                    <div className="navbar-brand">
-                <span className="navbar-caption-wrap">
-                    <a className="navbar-caption text-black text-primary display-7" href="/">⬤━⬤━⬤</a></span>
-                    </div>
+                    <Link  underline="none" style={{ textDecoration: 'none' }} className="display-7" href="#">⬤━⬤━⬤</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
                             data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
                             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,11 +20,6 @@ class Navbar extends React.Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                            <li className="nav-item">
-                                <a className="nav-link link show text-primary display-4"
-                                   href="join">
-                                    <span className="text-primary"></span>Join the team</a>
-                            </li>
                             <li className="nav-item">
                                 <a className="nav-link link show text-primary display-4"
                                    href="roadmap">

@@ -69,6 +69,7 @@ export default function AccountButton() {
                     // Nothing here
                 });
             getAssets().then(assets => {
+
                 const dots = assets.filter(a => a['asset-id'] == 745410378);
                 setDotsAsset(dots[0]);
                 const algo = assets.filter(a => a['asset-id'] == 287867876);
@@ -89,7 +90,7 @@ export default function AccountButton() {
             <div>
                 <a onClick={handleModalShow}>
                     <div className="text-nowrap small">
-                        {trimAccount(activeAccount.address, 5)} {algoAsset ? "| " + formatAlgos(algoAsset.amount) + " algo" : null}
+                        {trimAccount(activeAccount.address, 5)} {algoAsset ? "| " + formatDots(dotsAsset.amount) + " dots" : null}
                     </div>
                 </a>
 
@@ -104,8 +105,6 @@ export default function AccountButton() {
                                 <FontAwesomeIcon onClick={(e) => handleCopyClick(e)} icon={copyIcon}/>
                             </div>
                             <div className="col-5 align-right">
-                                {algoAsset ? formatAlgos(algoAsset.amount) : "0"} algo
-                                <br/>
                                 {dotsAsset ? formatDots(dotsAsset.amount) : "0"} dots
                             </div>
                         </div>

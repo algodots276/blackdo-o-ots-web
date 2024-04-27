@@ -22,7 +22,7 @@ class Roadmap extends React.Component {
                         <div className="apland-timeline-area">
                             <div className="single-timeline-area">
                                 <div className="timeline-date wow fadeInLeft" data-wow-delay="0.1s">
-                                    <p className="mbr-bold"><span className="roadmapFutureLabel">FUTURE</span>2024 Q1</p>
+                                    <p className="mbr-bold"><span className="roadmapFutureLabel">FUTURE</span>2024</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-12 col-md-6 col-lg-4">
@@ -37,15 +37,7 @@ class Roadmap extends React.Component {
                                         <div className="single-timeline-content d-flex"
                                              data-wow-delay="0.3s">
                                             <div className="timeline-text">
-                                                <h6>Buy merch with Algodots</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 col-md-6 col-lg-4">
-                                        <div className="single-timeline-content d-flex"
-                                             data-wow-delay="0.3s">
-                                            <div className="timeline-text">
-                                                <h6>Reach 25k$ in liquidity</h6>
+                                                <h6>Reach 100k$ in liquidity</h6>
                                             </div>
                                         </div>
                                     </div>

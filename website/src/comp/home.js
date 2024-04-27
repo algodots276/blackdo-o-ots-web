@@ -10,8 +10,7 @@ export default function Home() {
                 </h3>
                 <h3 className="mbr-section-title mbr-fonts-style align-center mb-4 display-5"><strong>⬤━⬤━⬤</strong>
                 </h3>
-                <h4 className="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">&nbsp; <strong>Empower
-                    creativity, inspire and spark your imagination<br/><br/></strong></h4>
+                <h4 className="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">&nbsp; <strong>Preserve value, collect, grow you balance<br/><br/></strong></h4>
             </div>
         </div>
     </div>);

@@ -1,6 +1,7 @@
 // Pages
 import Navbar from './comp/navbar';
 import Home from './comp/home';
+import Dog from './comp/dog';
 
 import {Routes, Route} from 'react-router-dom';
 
@@ -34,6 +35,7 @@ export default function App() {
                 <Navbar/>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
+                    <Route path="/dog" element={<Dog/>}/>
                 </Routes>
             </div>
         </WalletProvider>

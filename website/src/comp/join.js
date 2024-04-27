@@ -16,7 +16,7 @@ export default function JoinPage() {
         <div className="row">
             <div className="col-1"></div>
             <div className="col-6 my-auto">
-                <p className="text-muted d-none d-lg-block">We don't get payed, but we are building more then a project. We are building a
+                <p className="text-muted d-none d-lg-block">We don't get payed, but we are building more than a project. We are building a
                     community.</p>
                 <br/>
                 <p className="text-lg-start lh-base">If you are passioned about Crypto and NFT and you're ready to be
